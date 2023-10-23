@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Element Remover",
+    "version": "1.0",
+    "description": "Deletes specified elements on YouTube",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/watch*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
